@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
+        <script src="https://kit.fontawesome.com/da3a01af99.js" crossorigin="anonymous"></script>
+        <title>Deepanshu Netflix Clone Website</title>
+        <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
+            integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+/* Basic Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+.sub-nav {
+    display: flex;
+    gap: 20px;
+}
+.main-container {
+    padding: 20px 0;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.menu-toggle{
+    display: none;
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+
+    
+    .box{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .main-nav {
+        display: none;
+        flex-direction: column;
+    }
+    .sub-nav {
+        display: none;
+        flex-direction: column;
+    }
+    .menu-toggle{
+        display: block;
+    }
+    .main-nav.active, .sub-nav.active {
+        display: flex;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="netflixLogo">
+                    <a id="logo" href="#home">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/logo.PNG?raw=true" alt="Logo Image">
+                    </a>
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="main-nav">
+                    <a href="#home">Home</a>
+                    <a href="#tvShows">TV Shows</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#originals">News & popular</a>
+                    <a href="#">My List</a>
+                </nav>
+                <nav class="sub-nav">
+                    <a href="#">
+                        <i class="fas fa-search sub-nav-logo"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-bell sub-nav-logo"></i>
+                    </a>
+                    <a href="register.html" style="border: 1px solid red;background: red;padding: 4px 10px;color: #fff;">Sign In</a>
+                </nav>
+            </header>
+        </div>
+        <!-- END OF HEADER -->
+        <!-- MAIN CONTAINER -->
+        <section class="main-container">
+            <div class="location" id="home">
+                <h1 id="home">Popular on Netflix</h1>
+                <div class="box">
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p3.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p4.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p5.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p6.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p7.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p8.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p9.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p10.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p11.PNG?raw=true" alt="">
+                    </a>
+                    <a href="">
+                        <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p12.PNG?raw=true" alt="">
+                    </a>
+                </div>
+            </div>
+            <h1 id="myList">Trending Now</h1>
+            <div class="box">
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t1.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t4.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t6.PNG?raw=true" alt="">
+                </a>
+            </div>
+            <h1 id="tvShows">TV Shows</h1>
+            <div class="box">
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv1.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv2.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv3.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv4.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv5.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv6.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv7.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv8.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv9.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv10.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv11.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv12.PNG?raw=true" alt="">
+                </a>
+            </div>
+            <h1 id="movies">Blockbuster Action & Adventure</h1>
+            <div class="box">
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m1.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m2.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m3.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m4.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m5.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m6.PNG?raw=true" alt="">
+                </a>
+            </div>
+            <h1 id="originals">Netflix Originals</h1>
+            <div class="box">
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o1.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o2.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o3.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o4.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o5.PNG?raw=true" alt="">
+                </a>
+                <a href="">
+                    <img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o6.PNG?raw=true" alt="">
+                </a>
+            </div>
+            <!-- END OF MAIN CONTAINER -->
+            <!-- LINKS -->
+            <section class="link">
+                <div class="logos">
+                    <a href="https://www.linkedin.com/in/deepanshu-thakur-985a5a215">
+                        <i class="fab fa-linkedin" style="color: white;text-decoration: none;font-size: 30px;"></i>
+                    </a>
+                    <a href="https://github.com/digrajthakur">
+                        <i class="fab fa-github" style="color: white;text-decoration: none;font-size: 30px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/deepanshuthakur360/">
+                        <i class="fab fa-instagram" style="color: white;text-decoration: none;font-size: 30px;"></i>
+                    </a>
+                </div>
+                <div class="sub-links">
+                    <ul>
+                        <li>
+                            <a href="#">Audio and Subtitles</a>
+                        </li>
+                        <li>
+                            <a href="#">Audio Description</a>
+                        </li>
+                        <li>
+                            <a href="helpcenter.html">Help Center</a>
+                        </li>
+                        <li>
+                            <a href="#">Gift Cards</a>
+                        </li>
+                        <li>
+                            <a href="#">Media Center</a>
+                        </li>
+                        <li>
+                            <a href="#">Investor Relations</a>
+                        </li>
+                        <li>
+                            <a href="#">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="termcondition.html">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#">Legal Notices</a>
+                        </li>
+                        <li>
+                            <a href="#">Corporate Information</a>
+                        </li>
+                        <li>
+                            <a href="mailto:deepanshuthakur448@gmail.com">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- END OF LINKS -->
+            <!-- FOOTER -->
+            <footer>
+                <p><a href="#" style="color: #a9a9a9;text-decoration: none;">deepanshunetflixpage©allrightreserved2024</a></p>
+                <!-- <p>Carlos Avila &copy 2018</p> -->
+            </footer>
+        </div>
+        <script>
+    function toggleMenu() {
+        document.querySelector('.main-nav').classList.toggle('active');
+        document.querySelector('.sub-nav').classList.toggle('active');
+    }
+        </script>
+    </body>
+</html>

